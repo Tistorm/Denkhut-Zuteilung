@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <title>Welche Rolle nimmst Du ein?</title>
+  </head>
+  <body>
+    <main class="container">
+
+<h1 id="myText"></h1>
+
+<script>
+  const colors = {
+    "weiß": "Ich bin neutral und analysiere die Fakten.",
+    "schwarz": "Ich nehme in den Blick, was alles schlecht ist.",
+    "gelb": "Ich nehme in den Blick, was alles toll ist.",
+    "grün": "Ich will Neues entwickeln und denken.",
+    "blau": "Ich sorge für Ordnung und Struktur."
+  };
+
+  const text = document.querySelector("#myText");
+
+  window.addEventListener("load", function() {
+    const color = Object.keys(colors)[Math.floor(Math.random() * 5)];
+    text.innerHTML = colors[color];
+  });
+</script>
+
+    </main>
+      </body>
+</html>
