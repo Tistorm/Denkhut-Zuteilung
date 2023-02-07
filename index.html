@@ -13,17 +13,18 @@
 
 <script>
   const colors = {
-    "weiß": "weiß = Ich bin neutral und analysiere die Fakten.",
-    "schwarz": "schwarz = Ich nehme in den Blick, was alles schlecht ist.",
-    "gelb": "gelb = Ich nehme in den Blick, was alles toll ist.",
-    "grün": "grün = Ich will Neues entwickeln und denken.",
-    "blau": "blau = Ich sorge für Ordnung und Struktur."
+    "weiß": "weiß = Pure Fakten: objektiv, neutral, streng auf den Text/ die Fakten bezogen",
+    "schwarz": "schwarz = Zeit für Kritik: pessimistisch, sieht alle Probleme und Risiken",
+    "rot": "rot = Voller Emotionen: subjektiv, emotional, persönliche Meinung",
+    "grün": "grün = Neue Ideen: kreativ, neue Ideen und Lösungen, Verrücktes und Unrealistisches",
+    "blau": "blau = Dirigieren: Kontrolle und Organisation des Gesprächs, sorgt für Ausgewogenheit",
+    "gelb": "gelb = Blick nach vorne = optimistisch, sieht überall Chancen und Vorteile"
   };
 
   const text = document.querySelector("#myText");
 
   window.addEventListener("load", function() {
-    const color = Object.keys(colors)[Math.floor(Math.random() * 5)];
+    const color = Object.keys(colors)[Math.floor(Math.random() * 6)];
     text.innerHTML = colors[color];
   });
 </script>
